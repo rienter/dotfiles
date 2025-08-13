@@ -11,4 +11,9 @@ stow neovim tmux bash starship fzf ttf-input sway swaybg zoxide git rustup
 lua-language-server clangd tree-sitter tree-sitter-cli ripgrep
 ```
 
-Make sure they are installed with your favourite package manager.
+I also use `tpm` to manage `tmux` plugins, and that needs to be installed to
+use `tmux`:
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
