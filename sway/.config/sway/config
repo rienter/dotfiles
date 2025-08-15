@@ -197,7 +197,7 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym Print exec grim
 
 # looks
-output * bg ~/.config/wallpapers/PinkLady.png fill
+output * bg ~/.config/wallpapers/gabi.png fill
 gaps inner 5
 default_border none
 
