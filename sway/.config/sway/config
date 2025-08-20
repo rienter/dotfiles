@@ -46,7 +46,7 @@ input type:touchpad {
 #
 input type:keyboard {
 	xkb_layout "us,it"
-	xkb_options "grp:alt_shift_toggle"
+	xkb_options "grp:alt_shift_toggle,caps:swapescape"
 }
 #
 # You can also configure each device individually.
