@@ -1,0 +1,60 @@
+# Base colors
+set $bg          #14161b
+set $fg          #E0E2EA
+set $bg-alt      #2c2e33
+set $fg-dim      #C4C6CD
+set $fg-bright   #E0E2EA
+
+# Accent colors
+set $red         #E5ADB9
+set $green       #A2DFC0
+set $yellow      #E3CA85
+set $blue        #95C5E5
+set $magenta     #E5B6E6
+set $cyan        #7EDFDE
+set $white       #C4C6CD
+
+# Brights
+set $br-black    #4f5258
+set $br-red      #FFC0B9
+set $br-green    #B4F6C0
+set $br-yellow   #FCE094
+set $br-blue     #A6DBFF
+set $br-magenta  #FFCAFF
+set $br-cyan     #8CF8F7
+set $br-white    #9b9ea4
+
+# -------------------------
+# Window border colors
+# -------------------------
+# format: <border> <background> <text> <indicator> <child_border>
+
+client.focused          $cyan       $cyan       $bg          $cyan       $cyan
+client.focused_inactive $bg-alt     $bg-alt     $fg-dim      $bg-alt     $bg-alt
+client.unfocused        $bg-alt     $bg-alt     $fg-dim      $bg-alt     $bg-alt
+client.urgent           $red        $red        $fg          $red        $red
+client.placeholder      $bg         $bg         $fg-dim      $bg         $bg
+
+client.background       $bg
+
+# -------------------------
+# Swaybar colors
+# -------------------------
+bar {
+	position bottom
+	status_command ~/.config/sway/status.sh
+	# gaps 5
+
+    colors {
+        background $bg
+        statusline $fg
+        separator  $fg-dim
+
+        # workspace buttons
+        focused_workspace  $cyan $cyan $bg
+        active_workspace   $bg-alt $bg-alt $fg
+        inactive_workspace $bg $bg $fg-dim
+        urgent_workspace   $red $red $bg
+        binding_mode       $yellow $yellow $bg
+    }
+}

@@ -6,7 +6,8 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term kitty
+set $term ghostty
+set $quick_term kitten quick_access_terminal --detach
 # Your preferred application launcher
 set $menu wmenu-run
 
@@ -46,7 +47,7 @@ input type:touchpad {
 #
 input type:keyboard {
 	xkb_layout "us,it"
-	xkb_options "grp:alt_shift_toggle,caps:swapescape"
+	xkb_options "grp:alt_shift_toggle"
 }
 #
 # You can also configure each device individually.
@@ -58,6 +59,7 @@ input type:keyboard {
 #
 # Start a terminal
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $quick_term
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -67,6 +69,9 @@ bindsym $mod+d exec $menu
 
 # Wallpaper selector
 bindsym $mod+w exec choose_wall.sh
+
+# Toggle light/dark mode
+bindsym $mod+Shift+t exec toggle-theme.sh
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -198,25 +203,15 @@ bindsym Print exec grim
 
 # looks
 output * bg ~/.config/wallpapers/gabi.png fill
-gaps inner 5
-default_border none
+# gaps inner 5
+default_border normal
+smart_borders on
+
+font Berkeley Mono 11
 
 # cursor
 focus_follows_mouse no
 mouse_warping container
 
-bar {
-	position bottom
-	status_command ~/.config/sway/status.sh
-	gaps 5
-
-	colors {
-		background #141415cc
-		statusline #cdcdcd
-		separator #606079
-		focused_workspace #d8647e #d8647e #141415
-		inactive_workspace #141415 #141415 #606079
-	}
-}
-
+include ~/.config/sway/themes/current
 include /etc/sway/config.d/*

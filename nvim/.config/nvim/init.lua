@@ -1,7 +1,7 @@
 require("config.lazy")
 require("config.lsp")
 
-vim.cmd.colorscheme 'default'
+vim.cmd.colorscheme 'vague'
 
 vim.o.number = true
 vim.o.relativenumber = true
@@ -26,10 +26,13 @@ vim.o.smartcase = true
 vim.o.winborder = 'rounded'
 
 vim.opt.laststatus = 2
-vim.opt.statusline = " %f %m %= %l:%c ♥ "
+-- vim.opt.statusline = " %f %m %= %l:%c ♥ "
 vim.opt.termguicolors = true
 
 -- blinking block cursor
 vim.o.guicursor = "a:block-blinkwait700-blinkoff400-blinkon250"
 
 vim.o.cursorline = true
+
+-- cmdline completion
+vim.opt.wildoptions:append { "fuzzy" }

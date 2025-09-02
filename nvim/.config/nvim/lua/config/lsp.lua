@@ -2,7 +2,7 @@ vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
-vim.lsp.enable({ 'luals', 'rustup', 'cls' })
+vim.lsp.enable({ 'luals', 'rustup', 'cls', 'gopls' })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('lsp-capabilities', { clear = true }),
@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     if client:supports_method('textDocument/completion') then
       vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
+
       vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
       vim.keymap.set('i', '<C-Space>', function()
         vim.lsp.completion.get()
