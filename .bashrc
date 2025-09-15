@@ -1,21 +1,16 @@
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+export PATH="$HOME/.local/share/bob/nvim-bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH"
+source "/home/rie/.local/share/bob/env/env.sh"
+
+# Add your own exports, aliases, and functions here.
 #
-# ~/.bashrc
+# Make an alias for invoking commands you use constantly
+# alias p='python'
 #
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias vi='nvim'
-alias vim='nvim'
-PS1='[\u@\h \W]\$ '
-
-# Starhip
-eval "$(starship init bash)"
-
-# Zoxide
-eval "$(zoxide init bash)"
-
-# Fzf
-eval "$(fzf --bash)"
+# Use VSCode instead of neovim as your default editor
+# export EDITOR="code"
+#
+# Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
+# PS1="\W \[\e]0;\w\a\]$PS1"
