@@ -32,7 +32,9 @@ require('vague').setup {
   transparent = true,
 }
 
-vim.cmd.colorscheme 'catppuccin'
+vim.pack.add({ "https://git.twoexem.com/prismite.nvim" })
+
+vim.cmd.colorscheme 'vague'
 
 -- Git
 vim.pack.add({ "https://github.com/tpope/vim-fugitive" })
@@ -57,7 +59,7 @@ require('lazydev').setup {
 vim.pack.add({ "https://github.com/nvim-lualine/lualine.nvim" })
 require('lualine').setup {
   options = {
-    theme = "catppuccin",
+    theme = "rose-pine",
     section_separators = '',
     component_separators = '',
   },
@@ -72,3 +74,6 @@ require'nvim-treesitter'.setup {
     enable = true,
   },
 }
+
+-- Navigation in tmux
+vim.pack.add({ "https://github.com/christoomey/vim-tmux-navigator" })
