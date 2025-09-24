@@ -1,0 +1,33 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "bluetooth", "battery"],
+
+  "clock": {
+    "format": "{:%a %b %d %Y %R}"
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "  disconnected"
+  },
+
+  "bluetooth": {
+    "format": " {status}"
+  },
+
+  "battery": {
+    "format": "{capacity}%  ",
+    "format-charging": " {capacity}%  ",
+    "format-alt": "{time} {capacity}%"
+  }
+}

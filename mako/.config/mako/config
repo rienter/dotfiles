@@ -1,0 +1,19 @@
+# Font
+font=Berkeley Mono 11
+
+# Colors (Catppuccin Mocha)
+background=#1e1e2e
+foreground=#cdd6f4
+border-color=#cba6f7
+border-size=2
+
+# Geometry
+margin=10
+padding=10
+corner-radius=8
+
+# Time (auto-hide)
+timeout=5000
+
+# Position: top-right corner
+anchor=top-right
